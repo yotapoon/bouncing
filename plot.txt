@@ -1,0 +1,9 @@
+if(exist("n")==0||n<0) n=n0
+title(n) = sprintf("t = %.1f (%.1f\%)",n*dt,100.0*n/n1)
+unset label
+set label title(n)
+plot file_position.".txt" index n using 1:2 w p pt 6
+set arrow 1 from -1,n*dt to 1,n*dt nohead lw 1.0
+n= n+dn
+if(n<n1) reread
+undefine n

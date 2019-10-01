@@ -1,0 +1,21 @@
+reset
+set nokey
+set pointsize 0.5
+Xmin = -1.0
+Xmax = 1.0
+Ymin = -1.0
+Ymax = 2.0
+set xrange[Xmin:Xmax]
+set yrange[Ymin:Ymax]
+load "setting.txt"
+set size square
+set xlabel "x"
+set ylabel "y"
+set term gif animate
+set output file_position.".gif"
+
+
+n0=0
+dn=1
+
+load "plot.txt"
